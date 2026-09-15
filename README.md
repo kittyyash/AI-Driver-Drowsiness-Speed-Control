@@ -1,6 +1,6 @@
 # 🚗 AI-Based Driver Drowsiness Detection and Automatic Speed Control System with Alcohol Monitoring
 
-> An IoT-based driver safety system designed to detect driver drowsiness, monitor alcohol presence, detect obstacles, and automatically control vehicle speed using **NodeMCU ESP8266**.
+> An IoT-based driver safety system designed to detect driver drowsiness, monitor alcohol presence, detect obstacles, and automatically control vehicle speed using NodeMCU ESP8266.
 
 ---
 
@@ -10,7 +10,7 @@ The project includes a local web interface for demonstration.
 
 **Local Demo:** `http://10.51.227.152/`
 
-> ⚠️ This is a **local/private network IP address**. It will work only when the system and accessing device are connected to the same network. It is not a public website.
+> ⚠️ This is a **local/private network IP address**. It works only when the system and accessing device are connected to the same network. It is not a public website.
 
 ---
 
@@ -71,7 +71,7 @@ The project is developed using **NodeMCU ESP8266** as the main controller and in
 ## 💻 Technologies Used
 
 * **Embedded Systems**
-* **IoT**
+* **Internet of Things (IoT)**
 * **NodeMCU ESP8266**
 * **Embedded C / Arduino-compatible programming**
 * **Sensor Interfacing**
@@ -108,82 +108,80 @@ The **16×2 LCD Display** provides system information and sensor-related status 
 ## 🔄 System Workflow
 
 ```text
-              START
-                │
-                ▼
-       Initialize System
-                │
-                ▼
-        Read Eye Sensor
-                │
-        ┌───────┴───────┐
-        │               │
-   Drowsiness?          No
-        │               │
-       Yes              │
-        │               │
-        ▼               │
-   Safety Condition     │
-        │               │
-        └───────┬───────┘
-                ▼
-        Read MQ-3 Sensor
-                │
-        ┌───────┴───────┐
-        │               │
-   Alcohol Detected?    No
-        │               │
-       Yes              │
-        │               │
-        ▼               │
-   Safety Condition     │
-        │               │
-        └───────┬───────┘
-                ▼
-       Read Ultrasonic
-          Distance
-                │
-                ▼
-       Control Motor Speed
-                │
-                ▼
-        Update LCD Status
-                │
-                ▼
-          Repeat Cycle
+                    START
+                      │
+                      ▼
+             Initialize System
+                      │
+                      ▼
+              Read Eye Sensor
+                      │
+              ┌───────┴───────┐
+              │               │
+        Drowsiness?            No
+              │               │
+             Yes              │
+              │               │
+              ▼               │
+       Safety Condition        │
+              │               │
+              └───────┬───────┘
+                      ▼
+              Read MQ-3 Sensor
+                      │
+              ┌───────┴───────┐
+              │               │
+       Alcohol Detected?       No
+              │               │
+             Yes              │
+              │               │
+              ▼               │
+       Safety Condition        │
+              │               │
+              └───────┬───────┘
+                      ▼
+             Read Ultrasonic
+                Distance
+                      │
+                      ▼
+             Control Motor Speed
+                      │
+                      ▼
+              Update LCD Status
+                      │
+                      ▼
+                Repeat Cycle
 ```
 
 ---
 
 ## 🧩 System Architecture
 
-The overall system consists of four major sections:
-
 ```text
-┌───────────────────────────────┐
-│          INPUT SENSORS        │
-│                               │
-│  IR Eye Blink Sensor          │
-│  MQ-3 Alcohol Sensor          │
-│  HC-SR04 Ultrasonic Sensor    │
-└───────────────┬───────────────┘
+┌──────────────────────────────────┐
+│           INPUT SENSORS          │
+│                                  │
+│  IR Eye Blink Sensor             │
+│  MQ-3 Alcohol Sensor             │
+│  HC-SR04 Ultrasonic Sensor       │
+└───────────────┬──────────────────┘
                 │
                 ▼
-┌───────────────────────────────┐
-│       NODEMCU ESP8266         │
-│      Main Control Unit        │
-└───────────────┬───────────────┘
+┌──────────────────────────────────┐
+│         NODEMCU ESP8266          │
+│          Main Controller         │
+└───────────────┬──────────────────┘
                 │
-       ┌────────┴─────────┐
-       │                  │
-       ▼                  ▼
+        ┌───────┴────────┐
+        │                │
+        ▼                ▼
 ┌───────────────┐  ┌────────────────┐
-│  16×2 LCD     │  │ L298N Motor    │
-│   Display     │  │ Driver Module  │
+│   16×2 LCD    │  │ L298N Motor    │
+│    Display    │  │ Driver Module  │
 └───────────────┘  └───────┬────────┘
                            │
                            ▼
-                   DC Geared Motor
+                  DC Geared Motor
 ```
 
 ---
@@ -243,4 +241,97 @@ AI-Driver-Drowsiness-Speed-Control/
 
 ---
 
-## 🚀 Getting S
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/kittyyash/AI-Driver-Drowsiness-Speed-Control.git
+```
+
+### 2. Open the Project
+
+```bash
+cd AI-Driver-Drowsiness-Speed-Control
+```
+
+### 3. Open the Source Code
+
+The main source code is available at:
+
+```text
+src/driver_drowsiness_speed_control.ino
+```
+
+The code can be opened using an Arduino-compatible development environment or VS Code with the required extensions.
+
+### 4. Hardware Setup
+
+Connect the listed sensors, LCD display, motor driver, motor, and NodeMCU ESP8266 according to the project circuit diagram.
+
+### 5. Upload and Test
+
+Upload the program to the NodeMCU ESP8266 and test the sensor readings, LCD output, obstacle detection, and motor control functions.
+
+---
+
+## 🔐 Safety Conditions
+
+| Condition         | System Response                 |
+| ----------------- | ------------------------------- |
+| Driver Drowsiness | Safety response / speed control |
+| Alcohol Detection | Safety response                 |
+| Nearby Obstacle   | Motor speed control             |
+| Normal Condition  | Normal operation                |
+
+---
+
+## 📈 Expected Outcome
+
+The completed prototype demonstrates an integrated driver safety system capable of:
+
+* Detecting driver drowsiness.
+* Monitoring alcohol presence.
+* Detecting nearby obstacles.
+* Controlling motor speed automatically.
+* Displaying system status.
+* Providing an IoT-based vehicle safety prototype.
+
+---
+
+## 🔮 Future Enhancements
+
+Possible future improvements include:
+
+* AI-based camera vision for improved drowsiness detection.
+* Cloud-based monitoring and data storage.
+* Mobile application integration.
+* Advanced driver behaviour analysis.
+* Real-time emergency notification.
+* Machine-learning-based risk prediction.
+* Improved vehicle control algorithms.
+
+---
+
+## 🎓 Academic Project
+
+**Department:** Electrical and Electronics Engineering (EEE)
+
+**Project Type:** Academic / Embedded IoT Project
+
+**Project Title:**
+**AI-Based Driver Drowsiness Detection and Automatic Speed Control System with Alcohol Monitoring**
+
+---
+
+## 👩‍💻 Author
+
+### Dharunya
+
+🔗 **GitHub:** [@kittyyash](https://github.com/kittyyash)
+
+---
+
+## 📄 License
+
+This project is developed for **academic and educational purposes**.
