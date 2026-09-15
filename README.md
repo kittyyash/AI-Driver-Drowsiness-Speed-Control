@@ -10,7 +10,7 @@ The project includes a local web interface for demonstration.
 
 **Local Demo:** `http://10.51.227.152/`
 
-> ⚠️ This is a **local/private network IP address**. It works only when the system and accessing device are connected to the same network. It is not a public website.
+> ⚠️ **Note:** This is a **local/private network IP address**. It works only when the system and accessing device are connected to the same network. It is not a public website.
 
 ---
 
@@ -52,19 +52,19 @@ The project is developed using **NodeMCU ESP8266** as the main controller and in
 ## 🛠️ Hardware Components
 
 | S.No | Component                      |
-| ---- | ------------------------------ |
-| 1    | NodeMCU ESP8266                |
-| 2    | L298N Motor Driver Module      |
-| 3    | DC Geared Motor with Wheel     |
-| 4    | 18650 Lithium-Ion Battery Pack |
-| 5    | 16×2 LCD Display               |
-| 6    | HC-SR04 Ultrasonic Sensor      |
-| 7    | MQ-3 Alcohol Sensor            |
-| 8    | IR Eye Blink Sensor            |
-| 9    | Breadboard                     |
-| 10   | Jumper Wires                   |
-| 11   | USB Power Cable                |
-| 12   | Safety Goggles                 |
+| ---: | ------------------------------ |
+|    1 | NodeMCU ESP8266                |
+|    2 | L298N Motor Driver Module      |
+|    3 | DC Geared Motor with Wheel     |
+|    4 | 18650 Lithium-Ion Battery Pack |
+|    5 | 16×2 LCD Display               |
+|    6 | HC-SR04 Ultrasonic Sensor      |
+|    7 | MQ-3 Alcohol Sensor            |
+|    8 | IR Eye Blink Sensor            |
+|    9 | Breadboard                     |
+|   10 | Jumper Wires                   |
+|   11 | USB Power Cable                |
+|   12 | Safety Goggles                 |
 
 ---
 
@@ -192,9 +192,15 @@ The **16×2 LCD Display** provides system information and sensor-related status 
 
 ### Additional Prototype Views
 
+#### Project Setup
+
 ![Project Setup](images/project-setup.jpg)
 
+#### Sensor Setup
+
 ![Sensor Setup](images/sensor-setup.jpg)
+
+#### LCD Display
 
 ![LCD Display](images/lcd-display.jpg.png)
 
@@ -208,9 +214,9 @@ The project documentation contains the detailed explanation, circuit design, sys
 
 ### Project Diagrams
 
-* 📐 [Block Diagram](docs/block-diagram.png)
-* 🔌 [Circuit Diagram](docs/circuit-diagram.png)
-* 🔄 [Flowchart](docs/flowchart.png)
+* 📐 **[Block Diagram](docs/block-diagram.png)**
+* 🔌 **[Circuit Diagram](docs/circuit-diagram.png)**
+* 🔄 **[Flowchart](docs/flowchart.png)**
 
 ---
 
@@ -319,8 +325,7 @@ Possible future improvements include:
 
 **Project Type:** Academic / Embedded IoT Project
 
-**Project Title:**
-**AI-Based Driver Drowsiness Detection and Automatic Speed Control System with Alcohol Monitoring**
+**Project Title:** **AI-Based Driver Drowsiness Detection and Automatic Speed Control System with Alcohol Monitoring**
 
 ---
 
