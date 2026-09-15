@@ -116,32 +116,37 @@ The **16×2 LCD Display** provides system information and sensor-related status 
                       ▼
               Read Eye Sensor
                       │
+                      ▼
+             Check Drowsiness
+                      │
               ┌───────┴───────┐
               │               │
-        Drowsiness?            No
-              │               │
-             Yes              │
+             YES              NO
               │               │
               ▼               │
-       Safety Condition        │
+       Safety Response        │
               │               │
               └───────┬───────┘
                       ▼
               Read MQ-3 Sensor
                       │
+                      ▼
+              Check Alcohol
+                      │
               ┌───────┴───────┐
               │               │
-       Alcohol Detected?       No
-              │               │
-             Yes              │
+             YES              NO
               │               │
               ▼               │
-       Safety Condition        │
+       Safety Response        │
               │               │
               └───────┬───────┘
                       ▼
              Read Ultrasonic
                 Distance
+                      │
+                      ▼
+             Check Obstacle
                       │
                       ▼
              Control Motor Speed
@@ -158,30 +163,30 @@ The **16×2 LCD Display** provides system information and sensor-related status 
 ## 🧩 System Architecture
 
 ```text
-┌──────────────────────────────────┐
-│           INPUT SENSORS          │
-│                                  │
-│  IR Eye Blink Sensor             │
-│  MQ-3 Alcohol Sensor             │
-│  HC-SR04 Ultrasonic Sensor       │
-└───────────────┬──────────────────┘
-                │
-                ▼
-┌──────────────────────────────────┐
-│         NODEMCU ESP8266          │
-│          Main Controller         │
-└───────────────┬──────────────────┘
-                │
-        ┌───────┴────────┐
-        │                │
-        ▼                ▼
-┌───────────────┐  ┌────────────────┐
-│   16×2 LCD    │  │ L298N Motor    │
-│    Display    │  │ Driver Module  │
-└───────────────┘  └───────┬────────┘
-                           │
-                           ▼
-                  DC Geared Motor
+┌────────────────────────────────────┐
+│            INPUT SENSORS           │
+│                                    │
+│  IR Eye Blink Sensor               │
+│  MQ-3 Alcohol Sensor               │
+│  HC-SR04 Ultrasonic Sensor         │
+└────────────────┬───────────────────┘
+                 │
+                 ▼
+┌────────────────────────────────────┐
+│          NODEMCU ESP8266           │
+│           Main Controller          │
+└────────────────┬───────────────────┘
+                 │
+          ┌──────┴──────┐
+          │             │
+          ▼             ▼
+┌────────────────┐  ┌────────────────┐
+│   16×2 LCD     │  │ L298N Motor    │
+│    Display     │  │ Driver Module  │
+└────────────────┘  └───────┬────────┘
+                            │
+                            ▼
+                   DC Geared Motor
 ```
 
 ---
