@@ -10,17 +10,17 @@ The project includes a local web interface for demonstration.
 
 **Local Demo:** `http://10.51.227.152/`
 
-> ⚠️ **Note:** This is a **local/private network IP address**. It works only when the system and accessing device are connected to the same network. It is not a public website.
+> ⚠️ **Note:** This is a local/private network IP address. It works only when the system and accessing device are connected to the same network. It is not a public website.
 
 ---
 
 ## 📌 Project Overview
 
-Driver fatigue and alcohol consumption are major safety concerns in road transportation. This project combines multiple sensing technologies with IoT-based control to improve driver and vehicle safety.
+Driver fatigue and alcohol consumption are important safety concerns in road transportation. This project integrates multiple sensing technologies with IoT-based embedded control to improve driver and vehicle safety.
 
-The system continuously monitors the driver's eye condition and alcohol presence while also detecting obstacles in front of the vehicle. Based on the detected conditions, the system can automatically control the vehicle speed.
+The system monitors the driver's eye condition and alcohol presence while also detecting obstacles in front of the vehicle. Based on the detected safety conditions, the system can automatically control the vehicle speed.
 
-The project is developed using **NodeMCU ESP8266** as the main controller and integrates sensors, motor control, LCD display, and a DC geared motor.
+The prototype is developed using **NodeMCU ESP8266** as the main controller and integrates sensors, motor control, LCD display, and a DC geared motor.
 
 ---
 
@@ -44,7 +44,7 @@ The project is developed using **NodeMCU ESP8266** as the main controller and in
 * ⚙️ **Automatic Speed Control**
 * 📟 **LCD Status Display**
 * 🌐 **IoT / Local Web Monitoring**
-* 🔋 **Battery Powered Prototype**
+* 🔋 **Battery-Powered Prototype**
 * 🚗 **Motor-Based Vehicle Prototype**
 
 ---
@@ -77,7 +77,7 @@ The project is developed using **NodeMCU ESP8266** as the main controller and in
 * **Sensor Interfacing**
 * **Motor Control**
 * **LCD Interfacing**
-* **Web-based Local Monitoring**
+* **Web-Based Local Monitoring**
 
 ---
 
@@ -85,15 +85,15 @@ The project is developed using **NodeMCU ESP8266** as the main controller and in
 
 ### 1. Driver Drowsiness Detection
 
-The **IR Eye Blink Sensor** is used to monitor the driver's eye condition. When prolonged eye closure is detected, the system identifies a possible drowsiness condition.
+The **IR Eye Blink Sensor** is used to monitor the driver's eye condition. When prolonged eye closure is detected, the system identifies a possible drowsiness condition and initiates the programmed safety response.
 
 ### 2. Alcohol Monitoring
 
-The **MQ-3 Alcohol Sensor** detects the presence of alcohol around the driver. When the detected level crosses the configured threshold, the system identifies an alcohol-related safety condition.
+The **MQ-3 Alcohol Sensor** is used to detect the presence of alcohol around the driver. When the detected level crosses the configured threshold, the system identifies an alcohol-related safety condition.
 
 ### 3. Obstacle Detection
 
-The **HC-SR04 Ultrasonic Sensor** measures the distance between the vehicle and nearby obstacles.
+The **HC-SR04 Ultrasonic Sensor** measures the distance between the vehicle prototype and nearby obstacles.
 
 ### 4. Automatic Speed Control
 
@@ -174,7 +174,7 @@ The **16×2 LCD Display** provides system information and sensor-related status 
                  ▼
 ┌────────────────────────────────────┐
 │          NODEMCU ESP8266           │
-│           Main Controller          │
+│           MAIN CONTROLLER          │
 └────────────────┬───────────────────┘
                  │
           ┌──────┴──────┐
@@ -257,7 +257,7 @@ AI-Driver-Drowsiness-Speed-Control/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/kittyyash/AI-Driver-Drowsiness-Speed-Control.git
+git clone https://github.com/sandhiyabalasubramani/AI-Driver-Drowsiness-Speed-Control.git
 ```
 
 ### 2. Open the Project
@@ -336,12 +336,35 @@ Possible future improvements include:
 
 ## 👩‍💻 Author
 
-### Dharunya
+### B. SANDHIYA
 
-🔗 **GitHub:** [@kittyyash](https://github.com/kittyyash)
+**B.E. Electrical and Electronics Engineering**
+
+🔗 **GitHub:** [@sandhiyabalasubramani](https://github.com/sandhiyabalasubramani)
 
 ---
 
 ## 📄 License
 
 This project is developed for **academic and educational purposes**.
+
+---
+
+## ⭐ Project Highlights
+
+This project demonstrates practical implementation of:
+
+* IoT-based safety monitoring
+* Embedded system development
+* Sensor integration
+* Motor control
+* LCD interfacing
+* Real-time safety condition detection
+* ESP8266-based control systems
+
+---
+
+> 🚗 **Building safer transportation through IoT, embedded systems, and intelligent monitoring.**
+
+```
+```
